@@ -1,0 +1,40 @@
+{
+  "zones": {
+    "Whitefield, Bangalore": {
+      "price_per_sqft": 7500,
+      "demand_index": 0.85,
+      "liquidity_days": 120,
+      "volatility_index": 0.4,
+      "oversupply_pct": 10,
+      "appreciation_rate": 0.08,
+      "type": "mid"
+    },
+    "Koramangala, Bangalore": {
+      "price_per_sqft": 18000,
+      "demand_index": 0.95,
+      "liquidity_days": 45,
+      "volatility_index": 0.2,
+      "oversupply_pct": 2,
+      "appreciation_rate": 0.12,
+      "type": "prime"
+    },
+    "Rural Risk Zone": {
+      "price_per_sqft": 2500,
+      "demand_index": 0.6,
+      "liquidity_days": 280,
+      "volatility_index": 0.85,
+      "oversupply_pct": 25,
+      "appreciation_rate": 0.04,
+      "type": "risk"
+    },
+    "Indiranagar, Bangalore": {
+      "price_per_sqft": 15000,
+      "demand_index": 0.92,
+      "liquidity_days": 60,
+      "volatility_index": 0.25,
+      "oversupply_pct": 5,
+      "appreciation_rate": 0.10,
+      "type": "prime"
+    }
+  }
+}
