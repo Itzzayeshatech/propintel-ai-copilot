@@ -1496,5 +1496,861 @@
     },
     "rbi_compliant": true,
     "audit_trail_version": "1.0.0"
+  },
+  {
+    "id": "9e1ce68c-00d1-4338-870f-f66121649d79",
+    "timestamp": "2026-04-16T18:36:39.943542",
+    "input": {
+      "property_address": "Whitefield, Bangalore",
+      "property_type": "Residential Plot",
+      "area_sqft": 1200.0,
+      "age_years": 5,
+      "zone": "Whitefield, Bangalore",
+      "scenario": "normal"
+    },
+    "output": {
+      "valuation": {
+        "market_value": 7267500.0,
+        "distress_value": 5450625.0,
+        "liquidity_score": 3.04,
+        "liquidity_days": 120,
+        "price_per_sqft_applied": 7500,
+        "demand_index_applied": 0.85
+      },
+      "risk": {
+        "risk_level": "Medium",
+        "risk_score": -0.82,
+        "volatility": 0.4,
+        "is_stress_test": false
+      },
+      "decision": {
+        "decision": "APPROVED",
+        "ltv": 0.58,
+        "interest_rate": 11.2,
+        "loan_amount": 4215150.0,
+        "base_rate": 9.0,
+        "risk_premium": 2.2
+      },
+      "roi": {
+        "total_roi_3yr": 38.98,
+        "annualized_roi": 11.6,
+        "interest_income": 1416290.4,
+        "default_loss": 210757.5,
+        "recovery_value_potential": 4905562.5,
+        "holding_cost": 252909.0,
+        "default_probability": 5.0
+      },
+      "simulation": {
+        "scenario": "market_crash_15pc",
+        "impact": {
+          "scenario": "market_crash_15pc",
+          "valuation": {
+            "market_value": 6177375.0,
+            "distress_value": 4633031.25,
+            "liquidity_score": 3.04,
+            "liquidity_days": 120,
+            "price_per_sqft_applied": 6375.0,
+            "demand_index_applied": 0.85
+          },
+          "risk": {
+            "risk_level": "High",
+            "risk_score": -0.67,
+            "volatility": 0.7,
+            "is_stress_test": false
+          },
+          "decision": {
+            "decision": "APPROVED_WITH_CAUTION",
+            "ltv": 0.45,
+            "interest_rate": 13.0,
+            "loan_amount": 2779818.75,
+            "base_rate": 9.0,
+            "risk_premium": 4.0
+          },
+          "roi": {
+            "total_roi_3yr": 68.0,
+            "annualized_roi": 18.88,
+            "interest_income": 1084129.31,
+            "default_loss": 416972.81,
+            "recovery_value_potential": 4169728.12,
+            "holding_cost": 166789.12,
+            "default_probability": 15.0
+          }
+        }
+      },
+      "recovery": {
+        "strategy": "Aggressive Liquidation (Sell Now)",
+        "timeline_months": "0 - 3 Months",
+        "rationale": "High holding risk due to low liquidity ( > 100 days).",
+        "recovery_confidence": "Moderate"
+      },
+      "compliance": {
+        "rbi_compliant": true,
+        "audit_id": null
+      },
+      "executive_summary": {
+        "decision": "APPROVED",
+        "loan_amount": 4215150.0,
+        "interest_rate": 11.2,
+        "roi": 11.6,
+        "one_line": "APPROVE \u20b94,215,150 loan at 11.2% with 11.6% ROI under current conditions.",
+        "worst_case": "Under market crash, ROI drops by -7.3% to 18.88%"
+      },
+      "traditional_vs_ai": {
+        "overvaluation_reduction": "15-20%",
+        "default_rate_reduction": "30%",
+        "roi_improvement": "12.5%"
+      }
+    },
+    "rbi_compliant": true,
+    "audit_trail_version": "1.0.0"
+  },
+  {
+    "id": "d702d8c0-638f-4e32-95c5-cb9f1047f0ce",
+    "timestamp": "2026-04-16T18:44:09.754308",
+    "input": {
+      "property_address": "Whitefield, Bangalore",
+      "property_type": "Residential Plot",
+      "area_sqft": 1200.0,
+      "age_years": 5,
+      "zone": "Whitefield, Bangalore",
+      "scenario": "normal"
+    },
+    "output": {
+      "valuation": {
+        "market_value": 7267500.0,
+        "distress_value": 5450625.0,
+        "liquidity_score": 3.04,
+        "liquidity_days": 120,
+        "price_per_sqft_applied": 7500,
+        "demand_index_applied": 0.85
+      },
+      "risk": {
+        "risk_level": "Medium",
+        "risk_score": -0.82,
+        "volatility": 0.4,
+        "is_stress_test": false
+      },
+      "decision": {
+        "decision": "APPROVED",
+        "ltv": 0.58,
+        "interest_rate": 11.2,
+        "loan_amount": 4215150.0,
+        "base_rate": 9.0,
+        "risk_premium": 2.2
+      },
+      "roi": {
+        "total_roi_3yr": 38.98,
+        "annualized_roi": 11.6,
+        "interest_income": 1416290.4,
+        "default_loss": 210757.5,
+        "recovery_value_potential": 4905562.5,
+        "holding_cost": 252909.0,
+        "default_probability": 5.0
+      },
+      "simulation": {
+        "scenario": "market_crash_15pc",
+        "impact": {
+          "scenario": "market_crash_15pc",
+          "valuation": {
+            "market_value": 6177375.0,
+            "distress_value": 4633031.25,
+            "liquidity_score": 3.04,
+            "liquidity_days": 120,
+            "price_per_sqft_applied": 6375.0,
+            "demand_index_applied": 0.85
+          },
+          "risk": {
+            "risk_level": "High",
+            "risk_score": -0.67,
+            "volatility": 0.7,
+            "is_stress_test": false
+          },
+          "decision": {
+            "decision": "APPROVED_WITH_CAUTION",
+            "ltv": 0.45,
+            "interest_rate": 13.0,
+            "loan_amount": 2779818.75,
+            "base_rate": 9.0,
+            "risk_premium": 4.0
+          },
+          "roi": {
+            "total_roi_3yr": 68.0,
+            "annualized_roi": 18.88,
+            "interest_income": 1084129.31,
+            "default_loss": 416972.81,
+            "recovery_value_potential": 4169728.12,
+            "holding_cost": 166789.12,
+            "default_probability": 15.0
+          }
+        }
+      },
+      "recovery": {
+        "strategy": "Aggressive Liquidation (Sell Now)",
+        "timeline_months": "0 - 3 Months",
+        "rationale": "High holding risk due to low liquidity ( > 100 days).",
+        "recovery_confidence": "Moderate"
+      },
+      "compliance": {
+        "rbi_compliant": true,
+        "audit_id": null
+      },
+      "executive_summary": {
+        "decision": "APPROVED",
+        "loan_amount": 4215150.0,
+        "interest_rate": 11.2,
+        "roi": 11.6,
+        "one_line": "APPROVE \u20b94,215,150 loan at 11.2% with 11.6% ROI under current conditions.",
+        "worst_case": "Under market crash, ROI drops by -7.3% to 18.88%"
+      },
+      "traditional_vs_ai": {
+        "overvaluation_reduction": "15-20%",
+        "default_rate_reduction": "30%",
+        "roi_improvement": "12.5%"
+      }
+    },
+    "rbi_compliant": true,
+    "audit_trail_version": "1.0.0"
+  },
+  {
+    "id": "798404f9-6762-452e-b00a-fa8c51d0ef62",
+    "timestamp": "2026-04-16T18:44:11.299804",
+    "input": {
+      "property_address": "Whitefield, Bangalore",
+      "property_type": "Residential Plot",
+      "area_sqft": 1200.0,
+      "age_years": 5,
+      "zone": "Whitefield, Bangalore",
+      "scenario": "normal"
+    },
+    "output": {
+      "valuation": {
+        "market_value": 7267500.0,
+        "distress_value": 5450625.0,
+        "liquidity_score": 3.04,
+        "liquidity_days": 120,
+        "price_per_sqft_applied": 7500,
+        "demand_index_applied": 0.85
+      },
+      "risk": {
+        "risk_level": "Medium",
+        "risk_score": -0.82,
+        "volatility": 0.4,
+        "is_stress_test": false
+      },
+      "decision": {
+        "decision": "APPROVED",
+        "ltv": 0.58,
+        "interest_rate": 11.2,
+        "loan_amount": 4215150.0,
+        "base_rate": 9.0,
+        "risk_premium": 2.2
+      },
+      "roi": {
+        "total_roi_3yr": 38.98,
+        "annualized_roi": 11.6,
+        "interest_income": 1416290.4,
+        "default_loss": 210757.5,
+        "recovery_value_potential": 4905562.5,
+        "holding_cost": 252909.0,
+        "default_probability": 5.0
+      },
+      "simulation": {
+        "scenario": "market_crash_15pc",
+        "impact": {
+          "scenario": "market_crash_15pc",
+          "valuation": {
+            "market_value": 6177375.0,
+            "distress_value": 4633031.25,
+            "liquidity_score": 3.04,
+            "liquidity_days": 120,
+            "price_per_sqft_applied": 6375.0,
+            "demand_index_applied": 0.85
+          },
+          "risk": {
+            "risk_level": "High",
+            "risk_score": -0.67,
+            "volatility": 0.7,
+            "is_stress_test": false
+          },
+          "decision": {
+            "decision": "APPROVED_WITH_CAUTION",
+            "ltv": 0.45,
+            "interest_rate": 13.0,
+            "loan_amount": 2779818.75,
+            "base_rate": 9.0,
+            "risk_premium": 4.0
+          },
+          "roi": {
+            "total_roi_3yr": 68.0,
+            "annualized_roi": 18.88,
+            "interest_income": 1084129.31,
+            "default_loss": 416972.81,
+            "recovery_value_potential": 4169728.12,
+            "holding_cost": 166789.12,
+            "default_probability": 15.0
+          }
+        }
+      },
+      "recovery": {
+        "strategy": "Aggressive Liquidation (Sell Now)",
+        "timeline_months": "0 - 3 Months",
+        "rationale": "High holding risk due to low liquidity ( > 100 days).",
+        "recovery_confidence": "Moderate"
+      },
+      "compliance": {
+        "rbi_compliant": true,
+        "audit_id": null
+      },
+      "executive_summary": {
+        "decision": "APPROVED",
+        "loan_amount": 4215150.0,
+        "interest_rate": 11.2,
+        "roi": 11.6,
+        "one_line": "APPROVE \u20b94,215,150 loan at 11.2% with 11.6% ROI under current conditions.",
+        "worst_case": "Under market crash, ROI drops by -7.3% to 18.88%"
+      },
+      "traditional_vs_ai": {
+        "overvaluation_reduction": "15-20%",
+        "default_rate_reduction": "30%",
+        "roi_improvement": "12.5%"
+      }
+    },
+    "rbi_compliant": true,
+    "audit_trail_version": "1.0.0"
+  },
+  {
+    "id": "710110c4-3a38-4cdd-96c6-c471667b6c54",
+    "timestamp": "2026-04-16T18:51:36.342391",
+    "input": {
+      "property_address": "Whitefield, Bangalore",
+      "property_type": "Residential Plot",
+      "area_sqft": 1211.0,
+      "age_years": 10,
+      "zone": "Indiranagar, Bangalore",
+      "scenario": "normal"
+    },
+    "output": {
+      "valuation": {
+        "market_value": 15040620.0,
+        "distress_value": 11280465.0,
+        "liquidity_score": 6.08,
+        "liquidity_days": 60,
+        "price_per_sqft_applied": 15000,
+        "demand_index_applied": 0.92
+      },
+      "risk": {
+        "risk_level": "Low",
+        "risk_score": -2.42,
+        "volatility": 0.25,
+        "is_stress_test": false
+      },
+      "decision": {
+        "decision": "APPROVED",
+        "ltv": 0.7,
+        "interest_rate": 10.0,
+        "loan_amount": 10528434.0,
+        "base_rate": 9.0,
+        "risk_premium": 1.0
+      },
+      "roi": {
+        "total_roi_3yr": 18.43,
+        "annualized_roi": 5.8,
+        "interest_income": 3158530.2,
+        "default_loss": 210568.68,
+        "recovery_value_potential": 10152418.5,
+        "holding_cost": 631706.04,
+        "default_probability": 2.0
+      },
+      "simulation": {
+        "scenario": "market_crash_15pc",
+        "impact": {
+          "scenario": "market_crash_15pc",
+          "valuation": {
+            "market_value": 12784527.0,
+            "distress_value": 9588395.25,
+            "liquidity_score": 6.08,
+            "liquidity_days": 60,
+            "price_per_sqft_applied": 12750.0,
+            "demand_index_applied": 0.92
+          },
+          "risk": {
+            "risk_level": "High",
+            "risk_score": -2.27,
+            "volatility": 0.55,
+            "is_stress_test": false
+          },
+          "decision": {
+            "decision": "APPROVED_WITH_CAUTION",
+            "ltv": 0.45,
+            "interest_rate": 13.0,
+            "loan_amount": 5753037.15,
+            "base_rate": 9.0,
+            "risk_premium": 4.0
+          },
+          "roi": {
+            "total_roi_3yr": 68.0,
+            "annualized_roi": 18.88,
+            "interest_income": 2243684.49,
+            "default_loss": 862955.57,
+            "recovery_value_potential": 8629555.72,
+            "holding_cost": 345182.23,
+            "default_probability": 15.0
+          }
+        }
+      },
+      "recovery": {
+        "strategy": "Strategic Hold",
+        "timeline_months": "24 - 36 Months",
+        "rationale": "Prime asset in stable market; recovery potential is high.",
+        "recovery_confidence": "High"
+      },
+      "compliance": {
+        "rbi_compliant": true,
+        "audit_id": null
+      },
+      "executive_summary": {
+        "decision": "APPROVED",
+        "loan_amount": 10528434.0,
+        "interest_rate": 10.0,
+        "roi": 5.8,
+        "one_line": "APPROVE \u20b910,528,434 loan at 10.0% with 5.8% ROI under current conditions.",
+        "worst_case": "Under market crash, ROI drops by -13.1% to 18.88%"
+      },
+      "traditional_vs_ai": {
+        "overvaluation_reduction": "15-20%",
+        "default_rate_reduction": "30%",
+        "roi_improvement": "12.5%"
+      }
+    },
+    "rbi_compliant": true,
+    "audit_trail_version": "1.0.0"
+  },
+  {
+    "id": "94b64acb-3af1-4b70-9661-a7bf7ef58c49",
+    "timestamp": "2026-04-16T18:52:25.821296",
+    "input": {
+      "property_address": "Whitefield, Bangalore",
+      "property_type": "Residential Plot",
+      "area_sqft": 1211.0,
+      "age_years": 10,
+      "zone": "Indiranagar, Bangalore",
+      "scenario": "market_crash_15pc"
+    },
+    "output": {
+      "valuation": {
+        "market_value": 12784527.0,
+        "distress_value": 9588395.25,
+        "liquidity_score": 6.08,
+        "liquidity_days": 60,
+        "price_per_sqft_applied": 12750.0,
+        "demand_index_applied": 0.92
+      },
+      "risk": {
+        "risk_level": "High",
+        "risk_score": -2.27,
+        "volatility": 0.55,
+        "is_stress_test": false
+      },
+      "decision": {
+        "decision": "APPROVED_WITH_CAUTION",
+        "ltv": 0.45,
+        "interest_rate": 13.0,
+        "loan_amount": 5753037.15,
+        "base_rate": 9.0,
+        "risk_premium": 4.0
+      },
+      "roi": {
+        "total_roi_3yr": 68.0,
+        "annualized_roi": 18.88,
+        "interest_income": 2243684.49,
+        "default_loss": 862955.57,
+        "recovery_value_potential": 8629555.72,
+        "holding_cost": 345182.23,
+        "default_probability": 15.0
+      },
+      "simulation": {
+        "scenario": "market_crash_15pc",
+        "impact": {
+          "scenario": "market_crash_15pc",
+          "valuation": {
+            "market_value": 12784527.0,
+            "distress_value": 9588395.25,
+            "liquidity_score": 6.08,
+            "liquidity_days": 60,
+            "price_per_sqft_applied": 12750.0,
+            "demand_index_applied": 0.92
+          },
+          "risk": {
+            "risk_level": "High",
+            "risk_score": -2.27,
+            "volatility": 0.55,
+            "is_stress_test": false
+          },
+          "decision": {
+            "decision": "APPROVED_WITH_CAUTION",
+            "ltv": 0.45,
+            "interest_rate": 13.0,
+            "loan_amount": 5753037.15,
+            "base_rate": 9.0,
+            "risk_premium": 4.0
+          },
+          "roi": {
+            "total_roi_3yr": 68.0,
+            "annualized_roi": 18.88,
+            "interest_income": 2243684.49,
+            "default_loss": 862955.57,
+            "recovery_value_potential": 8629555.72,
+            "holding_cost": 345182.23,
+            "default_probability": 15.0
+          }
+        }
+      },
+      "recovery": {
+        "strategy": "Strategic Hold",
+        "timeline_months": "24 - 36 Months",
+        "rationale": "Prime asset in stable market; recovery potential is high.",
+        "recovery_confidence": "High"
+      },
+      "compliance": {
+        "rbi_compliant": true,
+        "audit_id": null
+      },
+      "executive_summary": {
+        "decision": "APPROVED_WITH_CAUTION",
+        "loan_amount": 5753037.15,
+        "interest_rate": 13.0,
+        "roi": 18.88,
+        "one_line": "APPROVE \u20b95,753,037 loan at 13.0% with 18.88% ROI under current conditions.",
+        "worst_case": "Under market crash, ROI drops by -13.1% to 18.88%"
+      },
+      "traditional_vs_ai": {
+        "overvaluation_reduction": "15-20%",
+        "default_rate_reduction": "30%",
+        "roi_improvement": "12.5%"
+      }
+    },
+    "rbi_compliant": true,
+    "audit_trail_version": "1.0.0"
+  },
+  {
+    "id": "46f6fa09-f576-42e7-a161-e8ff2be6a571",
+    "timestamp": "2026-04-16T19:37:17.343479",
+    "input": {
+      "property_address": "Whitefield, Bangalore",
+      "property_type": "Residential Plot",
+      "area_sqft": 1200.0,
+      "age_years": 5,
+      "zone": "Whitefield, Bangalore",
+      "scenario": "normal"
+    },
+    "output": {
+      "valuation": {
+        "market_value": 7267500.0,
+        "distress_value": 5450625.0,
+        "liquidity_score": 3.04,
+        "liquidity_days": 120,
+        "price_per_sqft_applied": 7500,
+        "demand_index_applied": 0.85
+      },
+      "risk": {
+        "risk_level": "Medium",
+        "risk_score": -0.82,
+        "volatility": 0.4,
+        "is_stress_test": false
+      },
+      "decision": {
+        "decision": "APPROVED",
+        "ltv": 0.58,
+        "interest_rate": 11.2,
+        "loan_amount": 4215150.0,
+        "base_rate": 9.0,
+        "risk_premium": 2.2
+      },
+      "roi": {
+        "total_roi_3yr": 38.98,
+        "annualized_roi": 11.6,
+        "interest_income": 1416290.4,
+        "default_loss": 210757.5,
+        "recovery_value_potential": 4905562.5,
+        "holding_cost": 252909.0,
+        "default_probability": 5.0
+      },
+      "simulation": {
+        "scenario": "market_crash_15pc",
+        "impact": {
+          "scenario": "market_crash_15pc",
+          "valuation": {
+            "market_value": 6177375.0,
+            "distress_value": 4633031.25,
+            "liquidity_score": 3.04,
+            "liquidity_days": 120,
+            "price_per_sqft_applied": 6375.0,
+            "demand_index_applied": 0.85
+          },
+          "risk": {
+            "risk_level": "High",
+            "risk_score": -0.67,
+            "volatility": 0.7,
+            "is_stress_test": false
+          },
+          "decision": {
+            "decision": "APPROVED_WITH_CAUTION",
+            "ltv": 0.45,
+            "interest_rate": 13.0,
+            "loan_amount": 2779818.75,
+            "base_rate": 9.0,
+            "risk_premium": 4.0
+          },
+          "roi": {
+            "total_roi_3yr": 68.0,
+            "annualized_roi": 18.88,
+            "interest_income": 1084129.31,
+            "default_loss": 416972.81,
+            "recovery_value_potential": 4169728.12,
+            "holding_cost": 166789.12,
+            "default_probability": 15.0
+          }
+        }
+      },
+      "recovery": {
+        "strategy": "Aggressive Liquidation (Sell Now)",
+        "timeline_months": "0 - 3 Months",
+        "rationale": "High holding risk due to low liquidity ( > 100 days).",
+        "recovery_confidence": "Moderate"
+      },
+      "compliance": {
+        "rbi_compliant": true,
+        "audit_id": null
+      },
+      "executive_summary": {
+        "decision": "APPROVED",
+        "loan_amount": 4215150.0,
+        "interest_rate": 11.2,
+        "roi": 11.6,
+        "one_line": "APPROVE \u20b94,215,150 loan at 11.2% with 11.6% ROI under current conditions.",
+        "worst_case": "Under market crash, ROI drops by -7.3% to 18.88%"
+      },
+      "traditional_vs_ai": {
+        "overvaluation_reduction": "15-20%",
+        "default_rate_reduction": "30%",
+        "roi_improvement": "12.5%"
+      }
+    },
+    "rbi_compliant": true,
+    "audit_trail_version": "1.0.0"
+  },
+  {
+    "id": "f9abce2c-b7e0-44d7-8b10-df3e01c4f3d5",
+    "timestamp": "2026-04-16T19:37:21.476114",
+    "input": {
+      "property_address": "Whitefield, Bangalore",
+      "property_type": "Residential Plot",
+      "area_sqft": 1200.0,
+      "age_years": 5,
+      "zone": "Whitefield, Bangalore",
+      "scenario": "normal"
+    },
+    "output": {
+      "valuation": {
+        "market_value": 7267500.0,
+        "distress_value": 5450625.0,
+        "liquidity_score": 3.04,
+        "liquidity_days": 120,
+        "price_per_sqft_applied": 7500,
+        "demand_index_applied": 0.85
+      },
+      "risk": {
+        "risk_level": "Medium",
+        "risk_score": -0.82,
+        "volatility": 0.4,
+        "is_stress_test": false
+      },
+      "decision": {
+        "decision": "APPROVED",
+        "ltv": 0.58,
+        "interest_rate": 11.2,
+        "loan_amount": 4215150.0,
+        "base_rate": 9.0,
+        "risk_premium": 2.2
+      },
+      "roi": {
+        "total_roi_3yr": 38.98,
+        "annualized_roi": 11.6,
+        "interest_income": 1416290.4,
+        "default_loss": 210757.5,
+        "recovery_value_potential": 4905562.5,
+        "holding_cost": 252909.0,
+        "default_probability": 5.0
+      },
+      "simulation": {
+        "scenario": "market_crash_15pc",
+        "impact": {
+          "scenario": "market_crash_15pc",
+          "valuation": {
+            "market_value": 6177375.0,
+            "distress_value": 4633031.25,
+            "liquidity_score": 3.04,
+            "liquidity_days": 120,
+            "price_per_sqft_applied": 6375.0,
+            "demand_index_applied": 0.85
+          },
+          "risk": {
+            "risk_level": "High",
+            "risk_score": -0.67,
+            "volatility": 0.7,
+            "is_stress_test": false
+          },
+          "decision": {
+            "decision": "APPROVED_WITH_CAUTION",
+            "ltv": 0.45,
+            "interest_rate": 13.0,
+            "loan_amount": 2779818.75,
+            "base_rate": 9.0,
+            "risk_premium": 4.0
+          },
+          "roi": {
+            "total_roi_3yr": 68.0,
+            "annualized_roi": 18.88,
+            "interest_income": 1084129.31,
+            "default_loss": 416972.81,
+            "recovery_value_potential": 4169728.12,
+            "holding_cost": 166789.12,
+            "default_probability": 15.0
+          }
+        }
+      },
+      "recovery": {
+        "strategy": "Aggressive Liquidation (Sell Now)",
+        "timeline_months": "0 - 3 Months",
+        "rationale": "High holding risk due to low liquidity ( > 100 days).",
+        "recovery_confidence": "Moderate"
+      },
+      "compliance": {
+        "rbi_compliant": true,
+        "audit_id": null
+      },
+      "executive_summary": {
+        "decision": "APPROVED",
+        "loan_amount": 4215150.0,
+        "interest_rate": 11.2,
+        "roi": 11.6,
+        "one_line": "APPROVE \u20b94,215,150 loan at 11.2% with 11.6% ROI under current conditions.",
+        "worst_case": "Under market crash, ROI drops by -7.3% to 18.88%"
+      },
+      "traditional_vs_ai": {
+        "overvaluation_reduction": "15-20%",
+        "default_rate_reduction": "30%",
+        "roi_improvement": "12.5%"
+      }
+    },
+    "rbi_compliant": true,
+    "audit_trail_version": "1.0.0"
+  },
+  {
+    "id": "dc3a66ce-3c79-4fe5-b3b5-2cfb59d43782",
+    "timestamp": "2026-04-16T19:37:28.327866",
+    "input": {
+      "property_address": "Whitefield, Bangalore",
+      "property_type": "Residential Plot",
+      "area_sqft": 1200.0,
+      "age_years": 5,
+      "zone": "Indiranagar, Bangalore",
+      "scenario": "normal"
+    },
+    "output": {
+      "valuation": {
+        "market_value": 15732000.0,
+        "distress_value": 11799000.0,
+        "liquidity_score": 6.08,
+        "liquidity_days": 60,
+        "price_per_sqft_applied": 15000,
+        "demand_index_applied": 0.92
+      },
+      "risk": {
+        "risk_level": "Low",
+        "risk_score": -2.42,
+        "volatility": 0.25,
+        "is_stress_test": false
+      },
+      "decision": {
+        "decision": "APPROVED",
+        "ltv": 0.7,
+        "interest_rate": 10.0,
+        "loan_amount": 11012400.0,
+        "base_rate": 9.0,
+        "risk_premium": 1.0
+      },
+      "roi": {
+        "total_roi_3yr": 18.43,
+        "annualized_roi": 5.8,
+        "interest_income": 3303720.0,
+        "default_loss": 220248.0,
+        "recovery_value_potential": 10619100.0,
+        "holding_cost": 660744.0,
+        "default_probability": 2.0
+      },
+      "simulation": {
+        "scenario": "market_crash_15pc",
+        "impact": {
+          "scenario": "market_crash_15pc",
+          "valuation": {
+            "market_value": 13372200.0,
+            "distress_value": 10029150.0,
+            "liquidity_score": 6.08,
+            "liquidity_days": 60,
+            "price_per_sqft_applied": 12750.0,
+            "demand_index_applied": 0.92
+          },
+          "risk": {
+            "risk_level": "High",
+            "risk_score": -2.27,
+            "volatility": 0.55,
+            "is_stress_test": false
+          },
+          "decision": {
+            "decision": "APPROVED_WITH_CAUTION",
+            "ltv": 0.45,
+            "interest_rate": 13.0,
+            "loan_amount": 6017490.0,
+            "base_rate": 9.0,
+            "risk_premium": 4.0
+          },
+          "roi": {
+            "total_roi_3yr": 68.0,
+            "annualized_roi": 18.88,
+            "interest_income": 2346821.1,
+            "default_loss": 902623.5,
+            "recovery_value_potential": 9026235.0,
+            "holding_cost": 361049.4,
+            "default_probability": 15.0
+          }
+        }
+      },
+      "recovery": {
+        "strategy": "Strategic Hold",
+        "timeline_months": "24 - 36 Months",
+        "rationale": "Prime asset in stable market; recovery potential is high.",
+        "recovery_confidence": "High"
+      },
+      "compliance": {
+        "rbi_compliant": true,
+        "audit_id": null
+      },
+      "executive_summary": {
+        "decision": "APPROVED",
+        "loan_amount": 11012400.0,
+        "interest_rate": 10.0,
+        "roi": 5.8,
+        "one_line": "APPROVE \u20b911,012,400 loan at 10.0% with 5.8% ROI under current conditions.",
+        "worst_case": "Under market crash, ROI drops by -13.1% to 18.88%"
+      },
+      "traditional_vs_ai": {
+        "overvaluation_reduction": "15-20%",
+        "default_rate_reduction": "30%",
+        "roi_improvement": "12.5%"
+      }
+    },
+    "rbi_compliant": true,
+    "audit_trail_version": "1.0.0"
   }
 ]
