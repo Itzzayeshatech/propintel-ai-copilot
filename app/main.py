@@ -101,6 +101,62 @@ async def evaluate(req: EvaluationRequest):
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
+class AnalyzeRequest(BaseModel):
+    property_value: float
+    loan_amount: float
+    location: str
+    tenure: int
+    stress_adjustment: float = 0.0
+
+@app.post("/api/analyze")
+async def analyze_loan(req: AnalyzeRequest):
+    stress_value = req.property_value * (1 + req.stress_adjustment/100)
+    ltv = req.loan_amount / stress_value if stress_value > 0 else 1.0
+    
+    if ltv <= 0.60:
+        risk_level = "Low"
+    elif ltv <= 0.82:
+        risk_level = "Medium"
+    else:
+        risk_level = "High"
+        
+    if risk_level == "Low":
+        decision = "APPROVED"
+        interest_rate = 9.5
+        confidence = 0.96
+        explanation = f"Low risk driven by conservative {ltv*100:.1f}% LTV ratio, affording substantial equity buffer against severe market downturn scenarios."
+    elif risk_level == "Medium":
+        decision = "APPROVED"
+        interest_rate = 10.5
+        confidence = 0.92
+        explanation = f"Moderate risk profile constrained by {ltv*100:.1f}% LTV. Acceptable exposure, but highly sensitive to localized liquidity shocks."
+    else:
+        decision = "REJECTED"
+        interest_rate = 12.5
+        confidence = 0.88
+        explanation = f"High risk exposure: {ltv*100:.1f}% LTV ratio breaches core NBFC safety thresholds under simulated stress conditions, leading to unacceptable default probability."
+        
+    if req.tenure > 15 and risk_level == "Medium":
+        explanation += " Additionally, the extended tenure amplifies term-risk volatility."
+        
+    loc_lower = req.location.lower()
+    insight = "Standard operational region."
+    if "bengaluru" in loc_lower or "whitefield" in loc_lower:
+        insight = "Urban Bengaluru market – high liquidity but sensitive to downturns."
+    elif "rural" in loc_lower:
+        insight = "Rural market – historically lower liquidity and higher volatility."
+
+    return {
+        "risk_level": risk_level,
+        "decision": decision,
+        "interest_rate": interest_rate,
+        "confidence": confidence,
+        "stress_value": stress_value,
+        "ltv": ltv,
+        "explanation": explanation,
+        "location_insight": insight
+    }
+
 @app.get("/api/demo-case")
 async def demo_case():
     """
