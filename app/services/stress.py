@@ -62,10 +62,10 @@ class StressService:
         stressed_property_value = round(stressed_property_value, 2)
 
         # Stress LTV = loan / stressed_property_value
-        stress_ltv = round((loan_amount / stressed_property_value) * 100, 2)
+        stress_ltv = round((loan_amount / max(stressed_property_value, 1.0)) * 100, 2)
 
         # Property value drop %
-        drop_pct = round((1 - stressed_property_value / market_value) * 100, 2)
+        drop_pct = round((1 - stressed_property_value / max(market_value, 1.0)) * 100, 2)
 
         # Volatility bump
         vol_bump = (0.10 if crash else 0) + (0.08 if inflation_spike else 0) + (0.12 if sector_crash else 0)

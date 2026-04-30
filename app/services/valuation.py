@@ -31,7 +31,7 @@ class ValuationService:
 
         # Core formula: market_value = base * micro_market_index * demand_factor
         market_property_value = raw_property_value * m["micro_market_index"] * m["demand_factor"]
-        market_property_value = round(market_property_value, 2)
+        market_property_value = max(round(market_property_value, 2), 1.0) # Safety floor of 1.0
 
         base_ltv = round((loan_amount / market_property_value) * 100, 2)
 
