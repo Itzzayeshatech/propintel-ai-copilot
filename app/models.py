@@ -22,8 +22,10 @@ class LoanRequest(BaseModel):
 
 class SimplifiedExplainability(BaseModel):
     key_risk_factors: List[str]
-    stress_impact: str
-    final_reason: str
+    # New Structured Explainability (Audit Compliant)
+    property_value_change_explanation: str
+    ltv_increase_explanation: str
+    final_risk_reason: str
 
 class AuditMode(BaseModel):
     triggered_rules: List[str]
@@ -31,15 +33,16 @@ class AuditMode(BaseModel):
     compliance_check: str
 
 class LoanResponse(BaseModel):
-    # Core Judge Fields (Requested 10/10 structure)
-    market_value: float
-    stressed_value: float
+    # Core Standardized Audit Fields
+    market_property_value: float
+    stressed_property_value: float
+    property_value_drop_percentage: float
     base_ltv: float
     stress_ltv: float
     decision: str
     roi: float
     
-    # Extended Metadata
+    # Metadata
     request_id: UUID
     risk_level: str
     simplified_explainability: SimplifiedExplainability

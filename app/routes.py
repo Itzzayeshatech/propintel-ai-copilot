@@ -56,7 +56,7 @@ async def analyze_loan(request: LoanRequest):
             request.segment
         )
         
-        # 6. Decision (10/10 Logic)
+        # 6. Decision (Standardized logic)
         decision = DecisionService.get_decision(
             stressed_valuation["stress_ltv"],
             roi_results["roi_percentage"],
@@ -64,7 +64,6 @@ async def analyze_loan(request: LoanRequest):
         )
         
         # 7. Explainability
-        # Gather factors
         risk_factors = []
         if stressed_valuation["stress_ltv"] > 75: risk_factors.append("High Collateral Exposure")
         if roi_results["roi_percentage"] < 8: risk_factors.append("Compressed Net Margin")
@@ -74,24 +73,26 @@ async def analyze_loan(request: LoanRequest):
         simplified = ExplainabilityService.generate_simplified_output(
             base_valuation["base_ltv"],
             stressed_valuation["stress_ltv"],
+            base_valuation["market_property_value"],
+            stressed_valuation["stressed_property_value"],
             decision,
             risk_level,
-            triggered_rules,
             risk_factors
         )
         
         audit_trace = ExplainabilityService.generate_audit_trace(
             triggered_rules,
             risk_level,
-            simplified["stress_impact"]
+            simplified["property_value_change_explanation"]
         )
         
         end_time = time.perf_counter()
         response_time_ms = (end_time - start_time) * 1000
         
         return LoanResponse(
-            market_value=base_valuation["market_property_value"],
-            stressed_value=stressed_valuation["stressed_property_value"],
+            market_property_value=base_valuation["market_property_value"],
+            stressed_property_value=stressed_valuation["stressed_property_value"],
+            property_value_drop_percentage=stressed_valuation["property_value_drop_pct"],
             base_ltv=base_valuation["base_ltv"],
             stress_ltv=stressed_valuation["stress_ltv"],
             decision=decision,
