@@ -1,81 +1,94 @@
-# PropIntel AI Copilot for NBFCs
+# PropIntel AI Copilot 🚀
+### NBFC-Grade Collateral Evaluation & Risk Intelligence
 
-> **"From Static Collateral Checks → Autonomous Lending Intelligence"**
-
-PropIntel AI Copilot is a production-grade backend engine and high-performance financial dashboard designed to drastically reduce non-performing assets (NPAs) for NBFCs. It calculates true risk-adjusted ROI using dynamic property metrics, rather than relying on static formulas.
-
----
-
-## Architecture
-
-![Architecture Flow](https://raw.githubusercontent.com/framer/motion/main/public/logo.png) (Conceptual placeholder representation)
-1. **Input Interface**: Next.js frontend sends property details.
-2. **PropIntel Core API**: FastAPI intercepts the data.
-3. **8-Engine Evaluation Pipeline**:
-   - `Valuation Engine`: Derives asset worth via demand indicators and depreciation.
-   - `Risk Engine`: Calculates score leveraging liquidity mapping and market volatility.
-   - `Decision Engine`: Formulates variable LTV and adaptive interest premiums.
-   - `ROI Engine (Hero)`: Calculates the 3-Year annualized risk-adjusted return.
-   - `Simulation Engine`: Stresses the asset under varying economic scenarios (Crash/Drop/Spike).
-   - `Recovery Engine`: Automates Sell/Hold triggers based on liquidity thresholds.
-   - `Explainability Engine`: Provides human-readable context for UI rendering.
-   - `Compliance Logger`: Secures atomic audit trails for RBI standards.
+**PropIntel AI Copilot** is a production-ready decision intelligence system designed for NBFCs (like Poonawalla Fincorp). It replaces static, manual collateral checks with an autonomous, formula-driven engine that evaluates property value, risk resilience, and risk-adjusted ROI in real-time.
 
 ---
 
-## 💸 Executive CFO Impact
+## 🎯 The Problem
+Traditional lending systems often fail to account for:
+- **Dynamic Market Volatility**: Static valuations don't reflect sudden market crashes.
+- **Micro-Market Liquidity**: Property value is meaningless if the asset cannot be liquidated.
+- **Explainability**: Black-box AI models don't meet RBI's compliance requirements for auditability.
 
-For a standard ₹500Cr NBFC Portfolio:
-* **Saves ₹30Cr** in potential default losses by intercepting overvalued properties.
-* **Adds ₹18Cr** in net profitability enforcing variable risk premiums on moderately risky assets.
+## 💡 The Solution
+A "Stress-First" decision engine that simulates adverse scenarios **before** disbursement, providing structured, explainable rationale for every decision.
 
 ---
 
-## Example API Contract
+## 🛠️ Architecture: The Decision Pipeline
+The system follows a linear, enriched data pipeline:
+1. **Valuation Engine**: Calculates baseline LTV and micro-market liquidity.
+2. **Stress Engine (Centerpiece)**: Simulates Market Crash (-15%), Rate Spikes (+2%), and Liquidity Drops.
+3. **ROI Engine**: Computes Risk-Adjusted ROI: `Interest Income - (Default Probability × Loss)`.
+4. **Decision Engine**: Multi-factor risk scoring (APPROVE / CONDITIONAL / REJECT).
+5. **Explainability Module**: Generates RBI-compliant structured rationale.
 
-**POST `/api/evaluate`**
+---
 
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.9+
+- Node.js 18+
+
+### Backend Setup (FastAPI)
+```bash
+cd app
+pip install -r requirements.txt
+uvicorn main:app --reload --port 8000
+```
+
+### Frontend Setup (Next.js)
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## 📡 API Contract (POST `/api/v1/analyze-loan`)
+
+### Request Body
 ```json
 {
-  "property_address": "Whitefield, Bangalore",
-  "property_type": "Residential Plot",
-  "area_sqft": 1200,
-  "age_years": 5,
-  "zone": "Whitefield, Bangalore"
+  "location": "Whitefield",
+  "property_value": 8500000,
+  "loan_amount": 6000000,
+  "stress_market_crash": true,
+  "stress_rate_spike": false,
+  "stress_liquidity_drop": false
+}
+```
+
+### Sample Response
+```json
+{
+  "request_id": "550e8400-e29b-41d4-a716-446655440000",
+  "risk_level": "HIGH",
+  "ltv": 82.5,
+  "roi": 8.4,
+  "decision": "CONDITIONAL",
+  "explainability": {
+    "risk_factors": { "ltv": 70.5, "liquidity": 0.65, "volatility": 0.15 },
+    "explanations": ["Under stress, LTV exceeds safety threshold."],
+    "scenario_impact": "Market crash pushed LTV from 70% to 82%."
+  },
+  "stress_impact": {
+    "ltv": { "base_value": 70.5, "stressed_value": 82.5, "delta": 12.0 }
+  },
+  "response_time_ms": 124.5
 }
 ```
 
 ---
 
-## 🎬 Demo Steps for the Judge
-
-1. **Initial View (Baseline)**: Observe the standard lending decision on the dashboard when initialized. Everything looks relatively robust ("Normal Risk").
-2. **Crash the Market**: Click the **"Market Crash (-15%)"** trigger in the Simulation Panel.
-3. **Observe the Reaction**:
-   - The UI immediately flashes an animated Red Pulse `High Risk Alert`.
-   - The **ROI drops significantly** due to distress value reduction and default increases.
-   - Tell the story: *"Without this stress test, this asset would have passed basic LTV checks, locking the NBFC into a potential loss."*
-4. **Demo Story Mode**: Click the **"Launch Demo Story"** button at the top header to enter Demo View.
-   - Observe the "Traditional vs AI" side-by-side comparison for a rural property case study. 
+## 🏆 Hackathon Winning Features
+- ✅ **Stress Engine**: Real-time simulation of economic shocks.
+- ✅ **RBI Compliant**: Structured "Explainability" rationale for auditors.
+- ✅ **Performance**: Decision latency < 200ms.
+- ✅ **Premium UI**: Dark-mode dashboard with "Before vs After" impact analysis.
 
 ---
-
-## Setup Instructions
-
-### Backend (Python/FastAPI)
-
-1. Open a terminal in the root directory.
-2. Install dependencies: `pip install -r requirements.txt`
-3. Start the API server: `uvicorn app.main:app --reload --port 8000`
-
-### Frontend (Next.js)
-
-1. Open a terminal in the `/frontend` directory.
-2. Run `npm run dev` to start the dashboard on `http://localhost:3000`.
-
-*Note: The frontend allows simulated standalone use even if the backend isn't up, falling back to a pre-computed data structure for demo purposes.*
-
----
-
-## RBI Compliance Note
-All decisions run entirely on transparent formulas derived from dataset parameters (see `data/market_data.json`). Audit logs are automatically stored in `/data/audit_logs.json` ensuring full traceability for regulatory constraints (RBI guidelines).
+© 2026 PropIntel AI. Built for the Future of NBFC Lending.
