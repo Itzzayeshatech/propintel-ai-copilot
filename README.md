@@ -1,6 +1,8 @@
 # PropIntel AI Copilot
 ### NBFC-Grade Collateral Evaluation & Risk Intelligence
 
+🚀 **Live Demo:** [Frontend](https://propintel-frontend.onrender.com) | 🛠️ **API:** [Backend](https://propintel-backend.onrender.com)
+
 **PropIntel AI Copilot** is a production-ready decision intelligence system designed for NBFCs. It replaces static, manual collateral checks with an autonomous, formula-driven engine that evaluates property value, risk resilience, and risk-adjusted ROI in real-time.
 
 ---
