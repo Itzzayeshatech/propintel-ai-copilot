@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  --color-fintech-dark: #0a0e17;
+  --color-fintech-panel: #111827;
+  --color-fintech-panel-hover: #1f2937;
+  --color-fintech-accent: #3b82f6; /* Blue */
+  --color-fintech-success: #10b981; /* Green */
+  --color-fintech-warning: #f59e0b; /* Yellow */
+  --color-fintech-danger: #ef4444; /* Red */
+  --color-fintech-text: #e5e7eb;
+  --color-fintech-text-muted: #9ca3af;
+  --color-fintech-border: #374151;
+}
+
+:root {
+  background-color: var(--color-fintech-dark);
+  color: var(--color-fintech-text);
+  color-scheme: dark;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-fintech-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-fintech-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-fintech-text-muted);
+}
+
+/* Premium UI Utilities */
+.glass {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
